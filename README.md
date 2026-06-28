@@ -2,7 +2,7 @@
 # I ran this to install R and get it working with jupyter:
 # sudo apt-get install -y r-base
 
-## but the above gave me an older version of R than I wanted, so then I ran the next 4 lines from here https://cran.r-project.org/bin/linux/ubuntu/ ; might need to change 'cran40' at some point and I skipped their 2nd of 5 lines; press enter after the add-apt-repository line
+## but the above gave me an older version of R than I wanted, so then I ran the next 4 lines from here https://cran.r-project.org/bin/linux/ubuntu/ ; might need to change 'cran40' at some point and I skipped their 2nd of 5 lines; need to press Y or enter sometimes
 # sudo apt update
 # wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 # sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
@@ -19,9 +19,9 @@
 ## said "Y"
 # sudo Rscript -e "install.packages('IRkernel', repos='https://cloud.r-project.org'); IRkernel::installspec(user=TRUE)"
 # code --install-extension REditorSupport.r
+# sudo chmod -R 777 /usr/local/lib/R/site-library
 # ctrl+shift+p -> developer: reload window
 # to use R kernel: top right -> click -> "Select Another Kernel..." -> Jupyter Kernel -> /usr/lib/R/bin/R
-# sudo chmod -R 777 /usr/local/lib/R/site-library
 ## next line from https://gist.github.com/tonybenoy/bd3576139861ac27b02f459abfd3a414
 # sudo apt-get install -y libcurl4-openssl-dev libfontconfig1-dev libxml2-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 ## next line from running $ sudo Rscript -e "install.packages('fs', repos='https://cloud.r-project.org')"

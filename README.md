@@ -18,6 +18,7 @@
 # sudo apt install jupyter-client
 ## said "Y"
 # sudo Rscript -e "install.packages('IRkernel', repos='https://cloud.r-project.org'); IRkernel::installspec(user=TRUE)"
+# Rscript -e "IRkernel::installspec(user=TRUE)"
 # code --install-extension REditorSupport.r
 # sudo chmod -R 777 /usr/local/lib/R/site-library
 # ctrl+shift+p -> developer: reload window
